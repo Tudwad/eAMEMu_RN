@@ -4,7 +4,7 @@
 
 Android-only e-AMUSEMENT PASS emulation app using HCE-F (with React Native)
 
-Download and install [Pre-built APK] (app-release.apk).
+Download and install [Pre-built APK](https://github.com/Tudwad/eAMEMu_RN-English/releases).
 
 ## Precautions before use
 
