@@ -1,4 +1,4 @@
-# eAMEMu_RN
+# eAMEMu_RN-English
 
 * [@juchan1220](https://github.com/juchan1220/eAMEMu_RN) (forked from juchan1220)
 
