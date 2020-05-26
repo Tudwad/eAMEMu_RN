@@ -37,7 +37,7 @@ class CardPreview extends React.Component {
                                 }
                             </Text>
                             <Text style={{paddingTop: 8, textAlign: 'center', alignSelf: 'center', fontSize: 24, color:'#FAFAFA', fontWeight: '500', letterSpacing:-0.5}}>
-                                {'터치하여 활성화'}
+                                {'Touch to activate'}
                             </Text>
                         </View>
                     </TouchableOpacity>
@@ -170,7 +170,7 @@ class CardEditScreen extends React.Component {
         sidError: false,
 
         image: this.props.navigation.getParam('image', ''),
-        index: this.props.navigation.getParam('index', null), // null 이면 카드 새로 생성
+        index: this.props.navigation.getParam('index', null), // null Create new card
         mode: '',
 
         update: this.props.navigation.getParam('update', null),
@@ -292,7 +292,7 @@ class CardEditScreen extends React.Component {
                                 fontWeight: 'bold',
                                 textAlignVertical: 'center',
                             }}>
-                                {this.state.mode === 'add' ? '카드 추가' : '카드 편집'}
+                                {this.state.mode === 'add' ? 'Add card' : 'Card editing'}
                             </Text>
 
                             <TouchableOpacity style={{
@@ -309,9 +309,9 @@ class CardEditScreen extends React.Component {
                         </View>
                     </View>
                     <ScrollView style={{flex: 1, paddingHorizontal: 24, paddingTop: 16,}}>
-                        <ETextInput title={'카드 이름'} value={this.state.name} onChangeText={text => this.setState({name: text})} ref={ref => this.nameInput = ref}/>
+                        <ETextInput title={'Card name'} value={this.state.name} onChangeText={text => this.setState({name: text})} ref={ref => this.nameInput = ref}/>
                         <TouchableOpacity onPress={() => this.selectPhoto()}>
-                            <ETextInput style={{marginTop: 24,}} title={'카드 배경'} value={this.state.image ? '사진이 선택되었습니다.' : '여기를 눌러 사진을 선택할 수 있습니다.'} editable={false}/>
+                            <ETextInput style={{marginTop: 24,}} title={'Card background'} value={this.state.image ? 'Photo selected.' : 'You can select a photo by clicking here.'} editable={false}/>
                         </TouchableOpacity>
 
                         <View style={{marginTop: 24, flexDirection: 'row'}}>
@@ -366,7 +366,7 @@ class CardEditScreen extends React.Component {
                             />
                         </View>
                         <Text style={{marginTop: 8, fontSize: 14, letterSpacing: -0.4, color: this.state.sidError ? '#F44336' : '#9E9E9E'}}>
-                            {'SID는 16진수 16자리 입니다. 카드 번호가 아님에 유의하세요!'}
+                            {'SID is 16 hexadecimal digits. Please note that it is not your card number!'}
                         </Text>
                         <TouchableOpacity style={{marginTop: 24, height: 48, backgroundColor: '#03A9F4', borderRadius:8, alignItems:'center', justifyContent:'center',}}
                             onPress={() => this.setRandomSid()}
